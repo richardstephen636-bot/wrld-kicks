@@ -1,0 +1,368 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #0e0e0e;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background-color: #000;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #d4af37;
+}
+.logo span {
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('wrld\ kicks.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #d4af37;
+}
+.hero-text p {
+  margin: 1rem 0 2rem;
+  font-size: 1.2rem;
+}
+.btn {
+  background-color: #d4af37;
+  color: #000;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Featured Section */
+.featured {
+  padding: 3rem 5%;
+  text-align: center;
+}
+.featured h2 {
+  color: #d4af37;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.collection-grid img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
+  transition: transform 0.3s;
+}
+.collection-grid img:hover {
+  transform: scale(1.05);
+}
+.collection-grid p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Shop Page Styles */
+.shop-hero {
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('https://images.unsplash.com/photo-1618005198919-d3d4b51a3f4e?auto=format&fit=crop&w=1920&q=80') center/cover;
+  color: #d4af37;
+}
+
+.shop-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Shop Section */
+.shop {
+  text-align: center;
+  padding: 4rem 5%;
+  background-color: #0e0e0e;
+}
+
+.section-title {
+  color: #d4af37;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Product Grid */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+/* Product Card */
+.product {
+  background: #111;
+  border: 1px solid rgba(212,175,55,0.4);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 260px;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(212,175,55,0.3);
+}
+
+/* Product Image */
+.product img {
+  width: 85%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #d4af37;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+.product h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.product p {
+  color: #d4af37;
+  font-weight: bold;
+  margin: 0.6rem 0 1rem;
+}
+
+/* Button */
+.product .btn {
+  background-color: #d4af37;
+  color: #000;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.product .btn:hover {
+  background-color: #fff;
+}
+
+/* Image Spin Animation */
+.spin-img.clicked {
+  transform: rotateY(360deg);
+}
+
+/* Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About Page Styles */
+.about-hero {
+  height: 70vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('sneaker\ collection.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-hero-text h1 {
+  font-size: 3rem;
+  color: #d4af37;
+}
+.about-hero-text span {
+  color: #fff;
+}
+.about-hero-text p {
+  color: #ddd;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Story Section */
+.about-story {
+  padding: 4rem 10%;
+  text-align: center;
+}
+.about-story h2 {
+  color: #d4af37;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.about-story p {
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+/* Craftsmanship Section */
+.craftsmanship {
+  background-color: #111;
+  padding: 4rem 8%;
+}
+
+.craft-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.craft-container img {
+  width: 45%;
+  border-radius: 12px;
+  border: 2px solid #d4af37;
+}
+
+.craft-text {
+  flex: 1;
+  min-width: 280px;
+  color: #ddd;
+}
+.craft-text h2 {
+  color: #d4af37;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.craft-text p {
+  line-height: 1.7;
+}
+
+/* Responsive About Layout */
+@media (max-width: 768px) {
+  .craft-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .craft-container img {
+    width: 90%;
+  }
+}
+
+
+
+/* Active nav link highlight */
+.nav-links a.active {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+
+/* Scroll Animation Base */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When the element is visible */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Scroll Animation: Base Fade */
+.fade-in,
+.slide-in-left,
+.slide-in-right {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Slide-in from Left */
+.slide-in-left {
+  transform: translateX(-80px);
+}
+
+/* Slide-in from Right */
+.slide-in-right {
+  transform: translateX(80px);
+}
+
+/* When visible */
+.fade-in.show,
+.slide-in-left.show,
+.slide-in-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Footer */
+footer {
+  background-color: #000;
+  padding: 1rem 0;
+  text-align: center;
+  color: #d4af37;
+  font-size: 0.9rem;
+}
